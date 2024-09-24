@@ -1,8 +1,9 @@
 import React from "react";
 import Todo from "../model/todo";
 import TotoItems from "./TodoItem";
+import classes from './Todos.module.css'
 const Todos:React.FC<{items:Todo[]}>=(props)=>{
-return <ul>
+return <ul className={classes.todos}>
     {
         props.items.map((item)=> ( 
             <TotoItems key={item.id} text={item.text}/>
